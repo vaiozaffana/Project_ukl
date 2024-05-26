@@ -6,6 +6,55 @@ body {
   margin: 0;
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.container h1 {
+  letter-spacing: -0.1em;
+}
+
+header {
+  background-color: #ec4899;
+  color: white;
+  padding: 20px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: white;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  color: #0f172a;
+}
+
+a,
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
 #price {
   text-align: center;
 }

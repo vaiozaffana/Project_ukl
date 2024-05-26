@@ -24,11 +24,9 @@
         <nav>
           <ul>
             <li><a href="vaiozaffana.my.id/index.php">Profile</a></li>
-            <li>
-              <a href="Paket Belajar/Paket Belajar/index.php">Paket Belajar</a>
-            </li>
             <li><a href="./Testimoni/testimoni.php">Testimoni</a></li>
-            <li><a href="loginpage/register.php" class="contact-btn">Register</a></li>
+            <li><a href="sistem/register.php" class="contact-btn">Register</a></li>
+            <li><a href="sistem/login.php" class="contact-btn-login">Log in</a></li>
           </ul>
         </nav>
       </div>
@@ -52,7 +50,6 @@
             cita-cita. Dengan metode terkini serta dukungan relawan pembelajaran
             yang interaktif dan menyenangkan.
           </p>
-          <a href="#" class="learn-more-btn">Learn more</a>
         </div>
         <div class="kolom-kanan">
           <!-- banner atas -->
@@ -81,10 +78,10 @@
             <!-- Repeat this for each service -->
             <div class="service-card">
               <img src="./img/mapel.png" />
-              <h4>Mata Pelajaran Terlengkap</h4>
+              <h4>Mata Pelajaran Terbaik</h4>
               <p>
-                Kami menyediakan berbagai mata pelajaran yang sesuai dengan
-                kurikulum.
+                Kami menyediakan berbagai mata pelajaran yang berkualitas dan
+                tentunya sesuai dengan kurikulum
               </p>
             </div>
             <div class="service-card">
@@ -251,12 +248,7 @@
                     </li>
                   </ul>
                   <div class="profile-name">
-                    <h2>Dadang</h2>
                     <div class="profile-bio">
-                      <p>
-                        Saya adalah pengajar Matematika dengan keahlian
-                        pemrograman Python dan Matlab.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -377,14 +369,7 @@
                     </li>
                   </ul>
                   <div class="profile-name">
-                    <h2>Ruby</h2>
                     <div class="profile-bio">
-                      <p>
-                        Halooo saya Ms.Ruby Saya berpengalaman dalam mengajar
-                        Bahasa Inggris selama lebih dari 7 tahun. Mulai dari
-                        General English, English Conversation, Business English,
-                        TOEFL ITP, TOEFL iBT maupun IELTS.
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -504,12 +489,7 @@
                     </li>
                   </ul>
                   <div class="profile-name">
-                    <h2>Arfian</h2>
                     <div class="profile-bio">
-                      <p>
-                        Saya mempunyai pengalaman mengajar di bimbel selama 9
-                        tahun dan siap mengajar online atau offline
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -526,10 +506,6 @@
         <div class="reference">
           <h3>Sumber Referensi</h3>
           <a href="https://www.zenius.net/">Zenius</a>
-          <a href="https://instagram.com/davidm_ai?igshid=NGVhN2U2NjQ0Yg=="
-            >@davidm_ai</a
-          >
-          <a href="https://codepen.io/trending">Codepen</a>
         </div>
       </div>
     </footer>

@@ -3,11 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Paket Belajar</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <header>
+      <div class="container">
+        <h1>BikinCerdas</h1>
+        <nav>
+          <ul>
+            <li><a href="../vaiozaffana.my.id/index.php">Profile</a></li>
+            <li><a href="../dashboard.php">Beranda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div id="price">
       <div class="plan">
+
         <div class="plan-inner">
           <div class="entry-title">
             <h3>Basic</h3>
@@ -15,14 +27,12 @@
           </div>
           <div class="entry-content">
             <ul>
-              <li><strong>Belajar ratusan Video</strong></li>
-              <li><strong>Zencore</strong></li>
+              <li><strong>Akses puluhan Video</strong></li>
               <li><strong>Belajar praktis ZenLearning</strong></li>
-              <li><strong>Akses Selamanya</strong></li>
             </ul>
           </div>
           <div class="btn">
-            <a href="#">Daftar</a>
+            <a href="./pembayaran_basic.php">Daftar</a>
           </div>
         </div>
       </div>
@@ -36,14 +46,14 @@
           </div>
           <div class="entry-content">
             <ul>
-              <li><strong>Terbatas HANYA 60 SISWA/kelas</strong></li>
+              <li><strong>Akses Ribuan Video</strong></li>
               <li><strong>Sesi 1on1 Konsultasi Jurusan</strong></li>
-              <li><strong>Akses video premium</strong></li>
               <li><strong>Sesi live class eksklusif</strong></li>
+              <li><strong>Akses Ribuan Soal & Pembahasan</strong></li>
             </ul>
           </div>
           <div class="btn">
-            <a href="#">Daftar</a>
+            <a href="./pembayaran_cerdas_fokus.php">Daftar</a>
           </div>
         </div>
       </div>
@@ -52,18 +62,17 @@
         <div class="plan-inner">
           <div class="entry-title">
             <h3>Ultima</h3>
-            <div class="price">500 <kbd></kbd><span>/Per Tahun</span></div>
+            <div class="price">500 Rb <kbd></kbd><span>/Per Tahun</span></div>
           </div>
           <div class="entry-content">
             <ul>
-              <li><strong>Live Class 11x/minggu</strong></li>
-              <li><strong>90 Ribu + Vidio</strong></li>
-              <li><strong>Free Zenclub</strong></li>
-              <li><strong>Zencoins </strong></li>
+              <li><strong>Free CerdasClub</strong></li>
+              <li><strong>Akses Ratusan Soal & Pembahasan</strong></li>
+              <li><strong>Akses Ratusan Video</strong></li>
             </ul>
           </div>
           <div class="btn">
-            <a href="#">Daftar</a>
+            <a href="./pembayaran_ultima.php">Daftar</a>
           </div>
         </div>
       </div>
@@ -72,18 +81,17 @@
         <div class="plan-inner">
           <div class="entry-title">
             <h3>AKTIVA</h3>
-            <div class="price">300 K<span>/Per Tahun</span></div>
+            <div class="price">300 Rb <span>/Per Tahun</span></div>
           </div>
           <div class="entry-content">
             <ul>
-              <li><strong>2x TO</strong></li>
-              <li><strong>AKses 2000 soal</strong></li>
-              <li><strong>Akses 60k+ video premium </strong></li>
-              <li><strong>Zencoins</strong></li>
+              <li><strong>Free CerdasClub</strong></li>
+              <li><strong>Akses Puluhan Soal & Pembahasan</strong></li>
+              <li><strong>Akses Ratusan Video</strong></li>
             </ul>
           </div>
           <div class="btn">
-            <a href="#">Daftar</a>
+            <a href="./pembayaran_aktiva.php">Daftar</a>
           </div>
         </div>
       </div>

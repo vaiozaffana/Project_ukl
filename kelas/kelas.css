@@ -1,0 +1,390 @@
+body {
+  background-color: #fef2f2;
+  color: #575556;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Bakbak One", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  color: #0f172a;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container h1 {
+  letter-spacing: -0.1em;
+}
+
+.img-user {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.place-user {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+  background: var(--clr);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale3d(1.05, 1.05, 1);
+}
+
+.container-mapel {
+  display: flex;
+
+}
+
+.material-class-list {
+  margin-left: 12px;
+}
+
+.container-profile {
+  display: flex;
+}
+
+.class-list {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border-top: 1px solid #1f2937;
+  border-left: 1px solid #1f2937;
+  border-bottom: 7px solid #1f2937;
+  border-right: 7px solid #1f2937;
+  padding-left: 12px;
+  margin-bottom: 16px;
+  background-color: transparent;
+  color: #0f172a;
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.class-list a {
+  color: #1f2937;
+}
+
+.class-benefit {
+  background-color: #0f172a;
+  color: #fff;
+  width: 350px;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+
+.class-benefit h4 {
+  margin-top: 32px;
+  margin-left: 32px;
+}
+
+.session-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-session-time .label-session {
+  margin-left: 32px;
+}
+
+.time-input {
+  margin-left: 17px;
+}
+
+.label-session-time .duration-input {
+  width: 25%;
+  border-bottom: 2px solid #fff;
+  outline: #fff;
+}
+
+.label-session-time .label-time {
+  margin-right: 25px;
+}
+
+.label-session-time .duration-input:focus {
+  width: 25%;
+  border-bottom: 2px solid #fff;
+  outline: #fff;
+}
+
+.session-submit {
+  margin-left: 32px;
+  margin-top: 12px;
+  padding: 6px;
+  background-color: #fff;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.session-submit:hover {
+  margin-left: 32px;
+  margin-top: 12px;
+  padding: 6px;
+  background-color: #0f172a;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.session-time input {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.session-time input:focus {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.live-class {
+  display: flex;
+}
+
+.live-class a{
+  color: #fff;
+  text-decoration: underline ;
+  margin-top: 2.5px;
+  margin-left: 10px;
+}
+
+.class-benefit svg {
+  margin-left: 32px;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #ec4899;
+  color: white;
+  padding: 20px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+header nav ul li a {
+  color: white;
+  font-weight: 600;
+}
+.contact-btn {
+  background-color: #ef4444;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.contact-btn-login {
+  text-decoration: underline;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.services-section {
+  background-color: #fef2f2;
+  padding: 60px 0;
+}
+.services-section h3 {
+  text-align: center;
+  color: #1f2937;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.service-card i {
+  color: #ec4899;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+.service-card h4 {
+  color: #1f2937;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.service-card p {
+  color: #6b7280;
+  font-size: 16px;
+}
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: baseline;
+  gap: 30px;
+}
+
+.profile-wrapper {
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profile .profile-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: var(--background);
+  transition: 0.5s;
+}
+
+.profile-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profile:hover img {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.profile:hover .profile-image {
+  transform: translateY(-104px);
+  transition: all 0.9s;
+}
+
+.profile:hover .profile-bio {
+  opacity: 0.9;
+}
+
+.profile:hover .social-icons li a {
+  opacity: 1;
+}
+
+.profile:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+
+.profile:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+
+.profile:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+
+.profile:hover li:nth-child(4) a {
+  transition-delay: 0.4s;
+}
+
+.profile-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 120px;
+  padding: 12px 14px;
+  z-index: 1;
+  color: #333;
+  background-color: #fff;
+  text-align: left;
+}
+
+.profile:hover .profile-name {
+  background-color: #fff;
+}
+
+.profile p {
+  font-size: 12px;
+}
+
+footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .reference {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: #9ca3af;
+}
+footer p {
+  color: #9ca3af;
+}

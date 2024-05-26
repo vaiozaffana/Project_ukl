@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $password = $_POST['password'];
   $role = 'user'; // Role default untuk user baru
+  $email = $_POST['email'];
 
   // Periksa apakah username sudah ada
   $sql_check_username = "SELECT * FROM users WHERE username='$username'";
@@ -27,14 +28,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if ($username == $password) {
           echo "<script> alert('Password tidak boleh sama dengan username!')</script>";
       } else {
-          // Enkripsi password sebelum disimpan
-          $password_hash = password_hash($password, PASSWORD_DEFAULT);
+          // Simpan password tanpa enkripsi
+          $password_plain = $password;
 
           // Query untuk insert user baru ke database
-          $sql = "INSERT INTO users (username, password, role) VALUES ('$username', '$password_hash', '$role')";
+          $sql = "INSERT INTO users (username, password, role, email) VALUES ('$username', '$password_plain', '$role', '$email')";
 
           if ($koneksi->query($sql) === TRUE) {
-              header( "Location: login.php" );
+              header("Location: login.php");
           } else {
               echo "Error: " . $sql . "<br>" . $koneksi->error;
           }
@@ -62,31 +63,41 @@ $koneksi->close();
   <body>
     <main>
       <form action="" method="post">
-      <div class="wrapper">
-  <div class="login_box">
-    <div class="login-header">
-      <span>Register</span>
-    </div>
+        <div class="arrow-back">
+          <a href="../dashboard.php">
+            <img src="../img/arrow_white.png" width="35px" height="35px" alt="">
+          </a>
+        </div>
+        <div class="wrapper">
+          <div class="login_box">
+            <div class="login-header">
+              <span>Register</span>
+            </div>
 
-    <div class="input_box">
-      <input type="text" name="username" id="username" class="input-field" required>
-      <label for="user" class="label">Username</label>
-    </div>
+            <div class="input_box">
+              <input type="text" name="username" id="username" class="input-field" required>
+              <label for="user" class="label">Username</label>
+            </div>
 
-    <div class="input_box">
-      <input type="password" name="password" id="password" class="input-field" required>
-      <label for="pass" class="label">Password</label>
-    </div>
+            <div class="input_box">
+              <input type="email" name="email" id="email" class="input-field" required>
+              <label for="email" class="label">E-mail</label>
+            </div>
 
-    <div class="input_box">
-      <input type="submit" class="input-submit" value="Register">
-    </div>
+            <div class="input_box">
+              <input type="password" name="password" id="password" class="input-field" required>
+              <label for="pass" class="label">Password</label>
+            </div>
 
-    <div class="register">
-      <span>Already have an account? <a href="login.php">Login</a></span>
-    </div>
-  </div>
-</div>
+            <div class="input_box">
+              <input type="submit" class="input-submit" value="Register">
+            </div>
+
+            <div class="register">
+              <span>Already have an account? <a href="login.php">Login</a></span>
+            </div>
+          </div>
+        </div>
       </form>
     </main>
   </body>

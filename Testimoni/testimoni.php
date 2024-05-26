@@ -12,8 +12,7 @@
         <h1>BikinCerdas</h1>
         <nav>
           <a href="../dashboard.php">Beranda</a>
-          <a href="../vaiozaffana.my.id/index.html">Profile</a>
-          <a href="../Paket Belajar/Paket Belajar/index.html">Paket Belajar</a>
+          <a href="../vaiozaffana.my.id/index.php">Profile</a>
         </nav>
       </div>
     </header>

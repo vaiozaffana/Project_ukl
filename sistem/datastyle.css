@@ -10,13 +10,19 @@
     --second-color: #ffffff;
     --black-color: #000000;
   }
-  
+
   body {
-    background-image: linear-gradient(to bottom, #fe5c89, #a7a7a7);
+    background-image: url('./color_paper.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  .arrow-back {
+    width: 15%;
+    margin-top: 20px;
+    margin-left: 20px;
   }
   
   a {
@@ -34,7 +40,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
   }
   
   .login_box {
