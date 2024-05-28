@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sesi_submit'])) {
   $tanggal = $_POST['tanggal'];
   $jam = $_POST['waktu'];
 
-  $query = "INSERT INTO pertemuan (durasi, tanggal, waktu, username) VALUES ('$durasi', '$tanggal', '$jam', '$username')";
+  $query = "INSERT INTO pertemuan (durasi, tanggal, waktu, userId) VALUES ('$durasi', '$tanggal', '$jam', '$userId')";
   if ($koneksi->query($query) === TRUE) {
     echo "<script>alert('Pemesanan sesi berhasil.');</script>";
   } else {

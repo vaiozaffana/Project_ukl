@@ -49,8 +49,7 @@
 
         .payment-input,
         select,
-        option,
-        textarea {
+        option {
             background-color: transparent;
             width: 90%;
             height: 30px;
@@ -58,13 +57,8 @@
             border: none;
         }
 
-        .payment-submit {
-            background-color: transparent;
-            width: 90%;
-            height: 30px;
-            border-radius: 5px;
-            border: 2px solid #000;
-            cursor: pointer;
+        .payment-input,
+        select {
             margin-left: 12px;
             margin-bottom: 12px;
         }
@@ -77,8 +71,13 @@
             outline: none;
         }
 
-        .payment-input,
-        select {
+        .payment-submit {
+            background-color: transparent;
+            width: 90%;
+            height: 30px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            cursor: pointer;
             margin-left: 12px;
             margin-bottom: 12px;
         }
@@ -112,33 +111,36 @@
         }
 
         // Menangkap data yang dikirimkan oleh formulir
-        $username = $_POST['username'];
-        $tanggal_pembayaran = $_POST['tanggal_pembayaran'];
-        $metode_pembayaran = $_POST['metode_pembayaran'];
+        $username = $koneksi->real_escape_string($_POST['username']);
+        $tanggal_pembayaran = $koneksi->real_escape_string($_POST['tanggal_pembayaran']);
+        $metode_pembayaran = $koneksi->real_escape_string($_POST['metode_pembayaran']);
         $harga = 500000;
 
         // Mengecek apakah username ada di dalam tabel users
-        $query_user = "SELECT * FROM users WHERE username='$username'";
+        $query_user = "SELECT userId FROM users WHERE username='$username'";
         $result_user = mysqli_query($koneksi, $query_user);
 
         if (mysqli_num_rows($result_user) == 0) {
             echo "<script>alert('Username tidak ditemukan.');</script>";
         } else {
-            // Mengecek apakah username sudah melakukan pembayaran sebelumnya
-            $query_check = "SELECT * FROM pembayaran WHERE username='$username'";
+            $row_user = mysqli_fetch_assoc($result_user);
+            $userId = $row_user['userId'];
+
+            // Mengecek apakah userId sudah melakukan pembayaran sebelumnya
+            $query_check = "SELECT * FROM pembayaran WHERE userId='$userId'";
             $result_check = mysqli_query($koneksi, $query_check);
 
             if (mysqli_num_rows($result_check) > 0) {
                 echo "<script>alert('Pembayaran untuk username tersebut sudah dilakukan sebelumnya.');</script>";
             } else {
                 // Memasukkan data ke dalam tabel pembayaran
-                $query = "INSERT INTO pembayaran (username, tanggal_pembayaran, jumlah_pembayaran, metode_pembayaran) 
-                      VALUES ('$username', '$tanggal_pembayaran', $harga, '$metode_pembayaran')";
+                $query = "INSERT INTO pembayaran (userId, tanggal_pembayaran, jumlah_pembayaran, metode_pembayaran) 
+                  VALUES ('$userId', '$tanggal_pembayaran', $harga, '$metode_pembayaran')";
                 $result = mysqli_query($koneksi, $query);
 
                 if ($result) {
                     // Mengubah role menjadi 'pelajar' setelah pembayaran berhasil
-                    $query_update_role = "UPDATE users SET role='pelajar' WHERE username='$username'";
+                    $query_update_role = "UPDATE users SET role='pelajar' WHERE userId='$userId'";
                     mysqli_query($koneksi, $query_update_role);
 
                     echo "<script>alert('Pembayaran Berhasil!.');
@@ -154,21 +156,19 @@
     }
     ?>
 
-
-
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="payment-table">
         <h1 style="text-align: center;">Pembayaran</h1>
         <div class="payment-div">
             <div class="payment-content">
-                <label for="name">Username</label>
+                <label for="username">Username</label>
                 <input class="payment-input" type="text" placeholder="Username" name="username" required>
             </div>
             <div class="payment-content">
-                <label for="date">Tanggal Pembayaran</label>
+                <label for="tanggal_pembayaran">Tanggal Pembayaran</label>
                 <input class="payment-input" type="date" name="tanggal_pembayaran" required>
             </div>
             <div class="payment-content">
-                <label for="method">Alat Pembayaran</label>
+                <label for="metode_pembayaran">Alat Pembayaran</label>
                 <select name="metode_pembayaran" required>
                     <option value="gopay">Gopay</option>
                     <option value="dana">DANA</option>
@@ -176,8 +176,8 @@
                 </select>
             </div>
             <div class="payment-content">
-                <label for="text">Harga</label>
-                <label for="note">500.000</label>
+                <label for="harga">Harga</label>
+                <label>500.000</label>
             </div>
             <input class="payment-submit" type="submit" value="Bayar">
             <a href="./index.php">Batalkan Pembayaran</a>

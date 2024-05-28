@@ -12,7 +12,7 @@
         <nav>
           <ul>
             <li><a href="../vaiozaffana.my.id/index.php">Profile</a></li>
-            <li><a href="../dashboard.php">Beranda</a></li>
+            <li><a href="../index.php">Beranda</a></li>
           </ul>
         </nav>
       </div>

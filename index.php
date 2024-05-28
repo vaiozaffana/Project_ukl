@@ -23,7 +23,7 @@
         <h1>BikinCerdas</h1>
         <nav>
           <ul>
-            <li><a href="vaiozaffana.my.id/index.php">Profile</a></li>
+            <li><a href="profil/index.php">Profile</a></li>
             <li><a href="./Testimoni/testimoni.php">Testimoni</a></li>
             <li><a href="sistem/register.php" class="contact-btn">Register</a></li>
             <li><a href="sistem/login.php" class="contact-btn-login">Log in</a></li>

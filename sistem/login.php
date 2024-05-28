@@ -103,7 +103,7 @@ $koneksi->close();
   <main>
   <form action="" method="post">
     <div class="arrow-back">
-      <a href="../dashboard.php">
+      <a href="../index.php">
         <img src="../img/arrow_white.png" width="35px" height="35px" alt="">
       </a>
     </div>

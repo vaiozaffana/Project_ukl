@@ -14,9 +14,9 @@ if ($koneksi->connect_error) {
 
 // Query untuk mengambil data pembayaran dengan informasi pengguna
 $sql = "
-    SELECT p.id_pembayaran, p.username, p.tanggal_pembayaran, p.jumlah_pembayaran, p.metode_pembayaran, u.email
+    SELECT p.id_pembayaran, p.userId, p.tanggal_pembayaran, p.jumlah_pembayaran, p.metode_pembayaran, u.email
     FROM pembayaran p
-    JOIN users u ON p.username = u.username
+    JOIN users u ON p.userId = u.userId
 ";
 $result = $koneksi->query($sql);
 
@@ -114,7 +114,7 @@ $result = $koneksi->query($sql);
         <tr>
             <th>No</th>
             <th>ID Pembayaran</th>
-            <th>Username</th>
+            <th>UserId</th>
             <th>Email</th>
             <th>Tanggal Pembayaran</th>
             <th>Jumlah Pembayaran</th>
@@ -128,7 +128,7 @@ $result = $koneksi->query($sql);
                 echo "<tr>";
                 echo "<td>".$counter."</td>";
                 echo "<td>".$row["id_pembayaran"]."</td>";
-                echo "<td>".$row["username"]."</td>";
+                echo "<td>".$row["userId"]."</td>";
                 echo "<td>".$row["email"]."</td>";
                 echo "<td>".$row["tanggal_pembayaran"]."</td>";
                 echo "<td>".$row["jumlah_pembayaran"]."</td>";

@@ -19,7 +19,7 @@
             <a href="#about">Tentang</a>
             <a href="#service">Informasi</a>
             <a href="#footer">Kontak</a>
-            <a href="../dashboard.php">Beranda</a>
+            <a href="../index.php">Beranda</a>
         </nav>
     </header>
     <section id="landing">
