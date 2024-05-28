@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../Paket Belajar/index.php");
             } elseif ($_SESSION['role'] == 'pelajar') {
                 // Pengguna adalah pelajar, cek pembayaran dan arahkan sesuai
-                $sql_pembayaran = "SELECT * FROM pembayaran WHERE username='$username'";
+                $sql_pembayaran = "SELECT * FROM pembayaran WHERE userId='$userId'";
                 $result_pembayaran = $koneksi->query($sql_pembayaran);
 
                 if ($result_pembayaran->num_rows > 0) {
